@@ -1,0 +1,62 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/url/of/previous/page">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+
+      <form class="form" action="/pease-pudding-naked" method="post">
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <h1 class="govuk-heading-xl">How many pease pudding sandwiches can you eat a week?</h1>
+
+            </legend>
+              <div class="govuk-radios">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="how-many-sandwiches" name="how-many-sandwiches" type="radio" value="One" {{ checked("how-many-sandwiches", "One") }}>
+                  <label class="govuk-label govuk-radios__label" for="how-many-sandwiches">
+                    One
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="how-many-sandwiches-2" name="how-many-sandwiches" type="radio" value="Two to nine"{{ checked("how-many-sandwiches", "Two to nine") }}>
+                  <label class="govuk-label govuk-radios__label" for="how-many-sandwiches-2">
+                    Two to nine
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="how-many-sandwiches-3" name="how-many-sandwiches" type="radio" value="Ten to fifty"{{ checked("how-many-sandwiches", "Ten to fifty") }}>
+                  <label class="govuk-label govuk-radios__label" for="how-many-sandwiches-3">
+                    Ten to fifty
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="how-many-sandwiches-4" name="how-many-sandwiches" type="radio" value="More than fifty">
+                  <label class="govuk-label govuk-radios__label" for="how-many-sandwiches-4">
+                    More than fifty
+                  </label>
+                </div>
+              </div>
+
+            </fieldset>
+          </div>
+
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

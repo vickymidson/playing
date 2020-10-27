@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/url/of/previous/page">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+
+      <form class="form" action="/check-your-answers" method="post">
+
+        <div class="govuk-form-group">
+          <h1 class="govuk-heading-xl">How good is pease pudding straight out of the tub?</h1>
+
+
+          <textarea class="govuk-textarea" id="eat-out-of-tub" name="eat-out-of-tub" rows="5" aria-describedby="eat-out-of-tub-hint">{{ data['eat-out-of-tub'] }}</textarea>
+        </div>
+
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}
