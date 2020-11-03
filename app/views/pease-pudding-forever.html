@@ -17,19 +17,43 @@
       <form class="form" action="/check-your-answers" method="post">
 
         <div class="govuk-form-group">
-          <h1 class="govuk-heading-xl">Can you survive on pease pudding alone?</h1>
 
-          <div class="govuk-warning-text">
-            <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
-            <strong class="govuk-warning-text__text">
-              <span class="govuk-warning-text__assistive">Warning</span>
-              You are at risk of nutrient deficiencies if you only eat pease pudding.
-            </strong>
-          </div>
 
-          <textarea class="govuk-textarea" id="surviving-on-pease-pudding" name="surviving-on-pease-pudding" rows="5" aria-describedby="surviving-on-pease-pudding">{{ data['surviving-on-pease-pudding'] }}</textarea>
+
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+                <h1 class="govuk-fieldset__heading">
+                  Can you survive on pease pudding alone?
+                </h1>
+              </legend>
+              <div class="govuk-warning-text">
+                <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+                <strong class="govuk-warning-text__text">
+                  <span class="govuk-warning-text__assistive">Warning</span>
+                  You are at risk of nutrient deficiencies if you only eat pease pudding.
+                </strong>
+              </div>
+              <div class="govuk-radios govuk-radios--inline">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="surviving-on-pease-pudding" name="surviving-on-pease-pudding" type="radio" value="Yes">
+                  <label class="govuk-label govuk-radios__label" for="surviving-on-pease-pudding">
+                    Yes
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="surviving-on-pease-pudding-2" name="surviving-on-pease-pudding" type="radio" value="No">
+                  <label class="govuk-label govuk-radios__label" for="surviving-on-pease-pudding-2">
+                    No
+                  </label>
+                </div>
+              </div>
+
+            </fieldset>
+
+
         </div>
-
+      </div>
         <button class="govuk-button" data-module="govuk-button">Continue</button>
 
       </form>
